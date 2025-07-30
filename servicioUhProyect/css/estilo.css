@@ -1,0 +1,197 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #d0f0c0;
+    color: #0f1e25;
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: #0f1e25;
+    color: #d0f0c0;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #38ef7d, 0 0 40px #38ef7d, 0 0 60px #38ef7d;
+    border: 2px solid #38ef7d;
+}
+
+h1, h2, h3 {
+    color: #38ef7d;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 6px #38ef7d;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+button {
+    background: #38ef7d;
+    color: #0f1e25;
+    padding: 0.85rem 2.2rem;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 0 8px #38ef7d, 0 0 20px #38ef7d;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    button:hover {
+        background: #2ecc71;
+        box-shadow: 0 0 12px #2ecc71, 0 0 30px #2ecc71;
+        transform: scale(1.1);
+    }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    margin-bottom: 1.6rem;
+    border: 2px solid #38ef7d;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    background: #0f1e25;
+    color: #d0f0c0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #2ecc71;
+        outline: none;
+        box-shadow: 0 0 10px #2ecc71;
+    }
+
+nav {
+    width: 100%;
+    background: #0f1e25;
+    box-shadow: 0 0 15px rgba(56, 239, 125, 0.6);
+    border-radius: 16px;
+    margin-bottom: 2.5rem;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #38ef7d;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+    nav a {
+        text-decoration: none;
+        color: #38ef7d;
+        margin: 0 1.25rem;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease;
+    }
+
+        nav a:hover {
+            color: #2ecc71;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: #38ef7d;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+.card {
+    background: #0f1e25;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+    table thead {
+        background: #38ef7d;
+        color: #0f1e25;
+    }
+
+    table th, table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #0f1e25;
+    }
+
+    table tbody tr:hover {
+        background: #2ecc71;
+        color: #fff;
+    }
+
+footer {
+    margin-top: auto;
+    padding: 1.5rem;
+    text-align: center;
+    color: #0f1e25;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+        nav a {
+            margin: 0.5rem 0;
+        }
+}
